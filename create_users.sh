@@ -1,6 +1,6 @@
 #!/bin/bash
 
-group_name="root"
+group_name="www-data"
 
 # Enable debug mode 
 #set -x 
