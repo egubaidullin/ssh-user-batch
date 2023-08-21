@@ -1,5 +1,7 @@
 #!/bin/bash
 
+group_name="root"
+
 # Enable debug mode 
 #set -x 
 
@@ -94,7 +96,7 @@ while IFS=' ' read -r ip port user pass; do
   sshpass -p "$pass" ssh -tt -p "$port" "$user@$ip" "sudo useradd $new_username"
 
   # Add user to root group
-  sshpass -p "$pass" ssh -tt -p "$port" "$user@$ip" "sudo usermod -aG root $new_username"
+  sshpass -p "$pass" ssh -tt -p "$port" "$user@$ip" "sudo usermod -aG $group_name $new_username"
 
   # Allow SSH login
   #sshpass -p "$pass" ssh -tt -p "$port" "$user@$ip" "echo ${new_username} | sudo tee -a /etc/ssh/sshd_config > /dev/null"
