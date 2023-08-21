@@ -20,7 +20,7 @@ The script accepts four command line arguments:
 - `newusername` - New user to create
 - `passphrase` - Passphrase for SSH key
 
-## Server List Format for the Script
+### Server List Format for the Script
 
 To use the script, you need to prepare a `servers.txt` file with the following format:
 ```
