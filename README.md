@@ -25,7 +25,7 @@ The script accepts four command line arguments:
 - Assumes password SSH auth for the admin user 
 - Connects to each server via SSH 
 - Creates new user account
-- Adds user to `root` group (configurable)
+- Adds user to specific group (configurable)
 - Sets up SSH key auth for new user
 - Tests login with new account
 
