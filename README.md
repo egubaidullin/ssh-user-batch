@@ -20,6 +20,22 @@ The script accepts four command line arguments:
 - `newusername` - New user to create
 - `passphrase` - Passphrase for SSH key
 
+## Server List Format for the Script
+
+To use the script, you need to prepare a `servers.txt` file with the following format:
+```
+xxx.xxx.xxx.xxx port login password
+```
+
+- `xxx.xxx.xxx.xxx`: The IP address of the remote server.
+- `port`: The SSH port number for the server.
+- `login`: The username for authentication.
+- `password`: The password for the user account.
+
+Each line in the `server_list` file should correspond to a remote server you want to manage with the script. Make sure to replace the placeholders with actual server details.
+This format allows the script to read and process server information efficiently, enabling batch user management on multiple remote servers with the specified credentials.
+
+
 ## Functionality
 
 - Assumes password SSH auth for the admin user 
